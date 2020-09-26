@@ -1,8 +1,12 @@
-import React from "react";
+import React, {ReactNode} from "react";
 
-import styles from "./Box.module.scss";
+import styles from "./index.module.scss";
 
-const Box: React.FC<{}> = ({ children: children }) => {
+type BoxProps = {
+    children: ReactNode
+}
+
+const Box: React.FC<BoxProps> = ({ children }) => {
     return <div className={styles.box}>
         { children }
     </div>
