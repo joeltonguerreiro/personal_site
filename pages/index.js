@@ -1,65 +1,90 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.scss";
+
+import Box from "../components/Box";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className={styles.containerFluid}>
       <Head>
-        <title>Create Next App</title>
+        <title>Joelton Guerreiro</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <div className={styles.container}>
+          <div className={styles.presentation}>
+            <div className={styles.photo}>
+              <img src="/my_photo.jpg" />
+            </div>
+            <div>
+              <div>
+                Olá, meu nome é{" "}
+                <span className={styles.name}>Joelton Guerreiro</span>
+              </div>
+              <div>Tenho 28 anos, solteiro e moro em Telêmaco Borba - PR</div>
+              <div>joeltonguerreiro@gmail.com</div>
+              <div>(43) 99931-8375</div>
+            </div>
+          </div>
+        </div>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <div className={styles.linksList}>
+          <div>
+            <a className={styles.link}>LinkedIn</a>
+          </div>
+          <div>
+            <a className={styles.link}>GitHub</a>
+          </div>
+        </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
+        <div className={styles.container}>
+          <Box className={(styles.skills)}>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Sou desenvolvedor web full stack com mais de 5 anos de experiência
+              criando aplicações CMS e de incentivo de vendas com a stack{" "}
+              <span className={styles.highlight}>
+                {" "}
+                React, PHP, SASS, Git e Docker
+              </span>
+              .
             </p>
-          </a>
+            <p>
+              Trabalho com a modelagem de dados, criação e consumo de APIs REST,
+              regras de negócio no backend e aplicação de layout e de fluxo de
+              usabilidade no frontend. Gosto muito de inovação, aprender
+              continuamente e de compartilhar meu conhecimento.{" "}
+            </p>
+            <p>
+              Atualmente estou me dedicando para me aprimorar na linguagem{" "}
+              <span className={styles.highlight}>Python</span> com foco em
+              machine learning e data science. Possuo graduação em Tecnologia em
+              Análise e Desenvolvimento de Sistemas pela UTFPR.
+            </p>
+          </Box>
+          <div className={styles.box}>
+            <div>
+              Estou em busca de oportunidades e desafios na área de
+              desenvolvimento de aplicações web para trabalhar com frontend,
+              backend ou ciência de dados.
+            </div>
+            <div>
+              Posso atuar como frontend developer com a stack React, na qual
+              possuo mais de 2 anos de experiência construindo interfaces de
+              alta performance e usabilidade
+            </div>
+            <div>
+              Posso atuar como backend developer com PHP, Node.js ou Python
+            </div>
+            <div>
+              Nesse momento gostaria muito de me desafiar em uma oportunidade
+              para trabalhar com inteligência artificial e ciência de dados
+            </div>
+          </div>
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <footer className={styles.footer}>Desenvolvido com Next.js</footer>
     </div>
-  )
+  );
 }
