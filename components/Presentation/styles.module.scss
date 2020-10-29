@@ -1,0 +1,34 @@
+.presentation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    line-height: 1.6rem;
+}
+
+.linksList {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    min-width: 240px;
+    margin: 10px 0;
+}
+
+.link {
+    border: 1px solid pink;
+    color: pink;
+    padding: 5px 20px;
+    border-radius: 5px;
+    transition: text-shadow, box-shadow 0.1s ease;
+
+    &:hover {
+        text-shadow: 0 0 1px lightblue;
+        box-shadow: 0 0 5px lightblue;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .presentation {
+        flex-direction: column;
+    }
+}

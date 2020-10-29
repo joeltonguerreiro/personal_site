@@ -1,43 +1,44 @@
 import React from "react";
-import { css } from "emotion";
 
+// import { css } from "emotion";
 import Box from "../Box";
 
 import styles from "./style.module.scss";
 
+import { StyledCarrer, ListSkills } from "./styles";
+
 const Carrer: React.FC = () => {
   return (
-    <div className={styles.carrer}>
-      <Box>
-        <h1>Carreira e formação</h1>
+    <Box>
+      <StyledCarrer>
         <div>
           <p>
-            Sou desenvolvedor web full stack com mais de 5 anos de experiência
-            criando aplicações CMS e de incentivo de vendas com a stack{" "}
-            <span className={styles.highlight}>
-              {" "}
-              React, PHP, SASS, Git e Docker
+            Desenvolvedor web full stack com mais de 5 anos de experiência
+            trabalhando com{" "}
+            <span className="highlight">
+              React, PHP, SASS, SQL, Git e Docker
             </span>
-            .
+            , além das seguintes skills:
           </p>
+          <ListSkills>
+            <li>Controle de estado de componentes com Redux.</li>
+            <li>Estilização de componentes com StyledComponents e Emotion.</li>
+            <li>Controle de fluxo e performance com Hooks e async await.</li>
+            <li>Criação e consumo de APIs REST.</li>
+            <li>Modelagem de banco dados e construção de consultas.</li>
+            <li>
+              Análise de necessidades de clientes para implementar regras de
+              negócio.
+            </li>
+          </ListSkills>
+          <p></p>
           <p>
-            Trabalho com a modelagem de dados, criação e consumo de APIs REST,
-            regras de negócio no backend e aplicação de layout e de fluxo de
-            usabilidade no frontend.
-          </p>
-          <p>
-            Gosto muito de inovação, aprender continuamente e de compartilhar
-            meu conhecimento. Atualmente estou me dedicando para me aprimorar na
-            linguagem <span className={styles.highlight}>Python</span> com foco
-            em machine learning e data science.
-          </p>
-          <p>
-            Possuo graduação em Tecnologia em Análise e Desenvolvimento de
-            Sistemas pela UTFPR.
+            Possuo graduação no curso de Tecnologia em Análise e Desenvolvimento
+            de Sistemas pela UTFPR, concluído em 2015.
           </p>
         </div>
-      </Box>
-    </div>
+      </StyledCarrer>
+    </Box>
   );
 };
 
