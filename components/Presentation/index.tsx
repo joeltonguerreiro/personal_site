@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import { StyledPresentation } from "./styles";
 
@@ -9,7 +10,12 @@ const Presentation = () => {
     <>
       <StyledPresentation>
         <StyledPhoto>
-          <img src="/my_photo.jpg" />
+          <Image
+            src="/my_photo.jpg"
+            alt="Picture of the author"
+            width={200}
+            height={200}
+          />
         </StyledPhoto>
         <div>
           <div className="name">Joelton Guerreiro</div>
